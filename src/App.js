@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class Desafio extends Component{
+
+  state ={
+    name:"Raphael",
+    age: 17,
+    food: "Lasanha",
+    músicas:["Deixa acontecer", "Eu e você sempre", "Sinais"]
+
+  }
+
+  render(){
+    return(
+      <div>
+        <h1>{this.state.name}</h1>
+        <h2>{this.state.age}</h2>
+        <h3>{this.state.food}</h3>
+        <ul>
+         <li>{this.state.músicas[0]}</li>
+         <li>{this.state.músicas[1]}</li>
+         <li>{this.state.músicas[2]}</li> 
+        </ul>
+      </div>
+    )
+  }
+
+
+
+
 }
-
-export default App;
+export default Desafio
